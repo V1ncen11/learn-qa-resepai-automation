@@ -5,6 +5,7 @@ pipeline{
         stage('Install Dependencies'){
             steps{
                 bat 'npm ci'
+                bat 'npx playwright install chromium'
             }
         }
         stage('Run resepai e2e test'){
